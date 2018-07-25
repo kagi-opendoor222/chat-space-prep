@@ -61,6 +61,7 @@ Things you may want to cover:
 
 ## groupsテーブル
 |Column|Type|Options|
+|------|----|-------|
 |key|integer|null: false, unique: true|
 |detail|text||
 
