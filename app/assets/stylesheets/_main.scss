@@ -1,0 +1,36 @@
+.sidebar{
+  width: 300px;
+  height: 100vh;
+  background-color: black;
+  .top{
+    background-color: #253141;
+    height: 100px;
+    padding: 0 20px;
+      &__name{
+        float: left;
+        width: 200px;
+        h2{
+          font-size: 16px;
+          font-weight: bold;
+          color: #FFFFFF;
+          line-height: 100px;
+        }
+      }
+  }
+  .chatgroups{
+    background-color: #2f3e51;
+    padding: 0 20px;
+    height: calc(100vh - 100px);
+    &__list{
+      color: #FFFFFF;
+      padding: 20px 0;
+      p.groupname{
+        font-size: 15px;
+      }
+      p.latest-message{
+        margin-top: 5px;
+        font-size: 11px;
+      }
+    }
+  }
+}
