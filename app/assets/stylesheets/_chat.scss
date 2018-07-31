@@ -1,0 +1,110 @@
+.contents{
+  float: right;
+  width: calc(100vw - 300px);
+  height: 100vh;
+    header{
+      height: 99px;
+      padding: 0 40px;
+      @include clearfix();
+      .group-detail{
+        float: left;
+        width: calc(100vw - 550px);
+        padding-top: 35px;
+        &__title{
+          font-size: 20px;
+          color: #333333;
+          margin: 0;
+        }
+        &__member-list{
+          margin-top: 15px;
+          font-size: 12px;
+          color: $supplement-gray;
+          li{
+            display: inline-block;
+          }
+        }
+      }
+      .edit-button{
+        float: right;
+        border: 2px solid $sky-blue;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin: 28px 0;
+        color: #38AEF0;
+        text-decoration: none;
+      }
+    }
+    .main-contents{
+      background-color: #AAAAAA;
+      height: calc(100vh - 192px);
+      padding: 0 40px;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #eeeeee;
+      .message-list{
+        padding-top: 6px;
+        .message-container{
+          padding-top: 40px;
+          &__header{
+            font-size: 16px;
+            font-weight: bold;
+            color: $basic-text-gray;
+            .date{
+              padding-left: 10px;
+              font-size: 12px;
+              font-weight: bold;
+              color: $supplement-gray;
+            }
+          }
+          &__text{
+            font-size: 14px;
+            margin-top: 10px;
+            color: $basic-text-gray;
+          }
+        }
+      }
+    }
+    .chat-box{
+      padding: 20px 40px;
+      background-color: #DDDDDD;
+      .send-message-box{
+        @include clearfix();
+        height: 50px;
+        &__textarea{
+          position: relative;
+          display: inline-block;
+          height: 50px;
+          width: calc(100vw - 475px);
+          float: left;
+          .textbox{
+            height: 50px;
+            border-style: none;
+            width: 100%;
+          }
+          .textbox::placeholder{
+            padding-left: 10px;
+          }
+          .uploadericon{
+              position: absolute;
+              right: 10px;
+              bottom: 13px;
+              color: $basic-text-gray;
+          }
+          #imageuploader{
+            display: none;
+          }
+        }
+        &__submitbutton{
+          float: right;
+          border-style: none;
+          background-color: $sky-blue;
+          color: white;
+          font-size: 16px;
+          height: 50px;
+          margin-left: 15px;
+          width: 80px;
+        }
+      }
+    }
+}
