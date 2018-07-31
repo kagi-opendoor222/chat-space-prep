@@ -1,44 +1,6 @@
-.sidebar
-  .top
-    .top__name
-      %h2
-        名前
-    .top_pencilkari
-    .top_gearkari
-  .chatgroups
-    .chatgroups__list
-      %p.group-name
-        groupname
-      %p.latest-message
-        まだメッセージはありません。
-    .chatgroups__list
-      %p.group-name
-        groupname
-      %p.latest-message
-        まだメッセージはありません。
-.contents
-  %header
-    .left-contents
-      %h2.left-contents__title
-        タイトル
-      %ul.left-contents__member
-        %p.member__list
-          member
-    .right-contents
-      .right-contents__button
-  .main-contents
-    %ul.massage-list
-      .message-detail
-        .message-detail__username
-          user
-        .message-detail__date
-        20XX/XX/XX
-      .message-main
-        %p.message-main__text
-          aaa
-  .chatbox
-    %form
-      %input{:type => "text"}
-      .choose-picture-box
-      %input{:type => "submit"}
-
+.wrapper
+  .notification
+    %p
+      チャットグループが作成されました。
+  = render partial: "messages/sidebar"
+  = render partial: "messages/chat"
