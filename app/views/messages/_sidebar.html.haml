@@ -5,8 +5,10 @@
         名前
     %ul.top__list
       %li
-        %a{:href => "#"}
-          = fa_icon "edit"
+        / %a{:href => "#"}
+        /   = fa_icon "edit"
+        = link_to edit_user_path(current_user.id) do
+          =fa_icon "edit"
       %li
         %a{:href => "#"}
           = fa_icon "cog"
