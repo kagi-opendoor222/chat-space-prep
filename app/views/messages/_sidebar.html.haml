@@ -1,0 +1,23 @@
+.sidebar
+  .top
+    .top__name
+      %h2
+        名前
+    %ul.top__list
+      %li
+        %a{:href => "#"}
+          = fa_icon "edit"
+      %li
+        %a{:href => "#"}
+          = fa_icon "cog"
+  .chatgroups
+    .chatgroup
+      %p.chatgroup__group-name
+        groupname
+      %p.chatgroup__latest-message
+        まだメッセージはありません。
+    .chatgroup
+      %p.chatgroup__group-name
+        groupname
+      %p.chatgroup__latest-message
+        まだメッセージはありません。

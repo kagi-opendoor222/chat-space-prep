@@ -1,0 +1,48 @@
+.sidebar{
+  width: 300px;
+  height: 100vh;
+  float: left;
+  .top{
+    @include clearfix();
+    background-color: #253141;
+    height: 100px;
+    padding: 0 20px;
+    line-height: 100px;
+    &__name{
+      display: inline-block;
+      float: left;
+      width: 200px;
+      h2{
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+    &__list{
+      float: right;
+      display: inline-block;
+      li{
+        display: inline-block;
+        a{
+          color: $white;
+        }
+      }
+    }
+  }
+  .chatgroups{
+    background-color: #2f3e51;
+    padding: 0 20px;
+    height: calc(100vh - 100px);
+    .chatgroup{
+      color: $white;
+      padding: 20px 0;
+      &__groupname{
+        font-size: 15px;
+      }
+      &__latest-message{
+        margin-top: 5px;
+        font-size: 11px;
+      }
+    }
+  }
+}

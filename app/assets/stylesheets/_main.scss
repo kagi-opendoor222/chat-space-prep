@@ -1,0 +1,6 @@
+.wrapper{
+  @include clearfix();
+  @import "./notification";
+  @import "./sidebar";
+  @import "./chat";
+}
