@@ -1,7 +1,10 @@
 .notification{
-  padding: 5px;
   background-color: $sky-blue;
-  p{
+  .notice{
+    color: $white;
+    text-align: center;
+  }
+  .alert{
     color: $white;
     text-align: center;
   }
