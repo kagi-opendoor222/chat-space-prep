@@ -1,6 +1,6 @@
 .wrapper{
   @include clearfix();
-  @import "modules/notification";
+
   @import "modules/sidebar";
   @import "modules/chat";
 }
