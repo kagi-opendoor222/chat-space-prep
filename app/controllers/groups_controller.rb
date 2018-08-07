@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
   def create
-    @group = Group.new(create_params)
+    @group = Group.new(group_params)
     if @group.save
       @group.users << User.where(id: params[:group][:user_ids])
       flash[:notice] = "グループ作成しました。"
@@ -16,13 +16,12 @@ class GroupsController < ApplicationController
 
   end
   def edit
-
+    @group = Group.find(params[:id])
   end
   def update
-
   end
   private
-  def create_params
+  def group_params
     params.require(:group).permit(:name)
   end
 end
