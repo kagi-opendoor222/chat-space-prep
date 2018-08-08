@@ -62,4 +62,6 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'i18n'
 gem 'pry-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
