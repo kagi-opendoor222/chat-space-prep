@@ -1,12 +1,9 @@
 class MessagesController < ApplicationController
   def index
-    @groups = Group.all
+    @group = Group.find(params[:group_id])
+    @message = Message.new
   end
   def create
-
-  end
-  private
-  def message_params
 
   end
 end
