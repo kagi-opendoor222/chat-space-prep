@@ -33,13 +33,17 @@
     background-color: #2f3e51;
     padding: 0 20px;
     height: calc(100vh - 100px);
+    overflow: scroll;
+    .group-link{
+      text-decoration: none;
+    }
     .chatgroup{
       color: $white;
       padding: 20px 0;
-      &__groupname{
+      &__name{
         font-size: 15px;
       }
-      &__latest-message{
+      &__message{
         margin-top: 5px;
         font-size: 11px;
       }
