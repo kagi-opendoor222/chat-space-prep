@@ -15,15 +15,10 @@
     %ul.message-list
       = render @messages
   .chat-box
-    /%form.send-message-box
     = form_for [@group, @message], html: {class: "send-message-box"} do |f|
       .send-message-box__textarea
-        /%input.textbox{:type => "text", :placeholder => "type a message"}
         = f.text_field :content, placeholder: "type a message", class: "textbox"
-        /%label.uploadericon{:for =>"imageuploader"}
         = f.label :image, class: "uploadericon", for: "imageuploader" do
           = fa_icon "image"
-        /%input#imageuploader{:type => "file"}
         = f.file_field :image, id: "imageuploader"
-      /%input.send-message-box__submitbutton{:type => "submit",:value => "Send"}
       = f.submit class: "send-message-box__submitbutton", value: "Send"
