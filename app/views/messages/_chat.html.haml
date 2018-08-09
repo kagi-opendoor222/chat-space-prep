@@ -5,10 +5,9 @@
         タイトル
       %ul.group-detail__member-list
         member:
-        %li
-          no1,
-        %li
-          no2
+        -@group.users.each do |user|
+          %li
+            = user.name
     %a.edit-button{href: "#"}
       Edit
   .main-contents
