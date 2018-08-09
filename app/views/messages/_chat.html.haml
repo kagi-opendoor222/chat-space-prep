@@ -22,13 +22,6 @@
           %p.message-container__text
             = image_tag(message.image.url) if message.image.url
             = message.content
-      %li.message-container
-        %h3.message-container__header
-          user
-          %span.date
-            20XX/XX/XX
-        %p.message-container__text
-          aaa
   .chat-box
     /%form.send-message-box
     = form_for [@group, @message], html: {class: "send-message-box"} do |f|
