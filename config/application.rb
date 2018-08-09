@@ -12,6 +12,9 @@ module ChatSpacePrep
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
+    Time::DATE_FORMATS[:default] = '%Y/%m/%d %H:%M:%S'
+
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
@@ -20,3 +23,4 @@ module ChatSpacePrep
     end
   end
 end
+
