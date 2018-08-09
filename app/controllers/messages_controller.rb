@@ -6,9 +6,9 @@ class MessagesController < ApplicationController
   def create
     message = @group.messages.new(message_params.merge(user_id: current_user.id))
     if message.save
-      redirect_to root_path
+      redirect_to action: :index
     else
-      redirect_to root_path, alert: "メッセージ送信に失敗しました。"
+      redirect_to action: :index, alert: "メッセージ送信に失敗しました。"
     end
   end
   private
