@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_group, only: [:index, :create]
   def index
     @message = Message.new
+    @messages = @group.messages
   end
   def create
     message = @group.messages.new(message_params.merge(user_id: current_user.id))
