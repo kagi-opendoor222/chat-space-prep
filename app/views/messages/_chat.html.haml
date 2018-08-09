@@ -13,15 +13,7 @@
       Edit
   .main-contents
     %ul.message-list
-      - @messages.each do |message|
-        %li.message-container
-          %h3.message-container__header
-            = message.user.name
-            %span.date
-              = message.created_at.strftime('%Y/%m/%d %H:%M:%S')
-          %p.message-container__text
-            = image_tag(message.image.url) if message.image.url
-            = message.content
+      = render @messages
   .chat-box
     /%form.send-message-box
     = form_for [@group, @message], html: {class: "send-message-box"} do |f|
