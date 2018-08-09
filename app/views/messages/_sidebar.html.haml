@@ -19,4 +19,9 @@
           .chatgroup__name
             = group.name
           .chatgroup__message
-            メッセージはまだありません。
+            -if group.messages.last && group.messages.last.content.present?
+              = group.messages.last.content
+            -elsif group.messages.last && group.messages.last.image
+              画像が表示されています。
+            -else
+              メッセージが投稿されていません。
