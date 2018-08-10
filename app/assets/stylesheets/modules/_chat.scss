@@ -2,6 +2,7 @@
   float: right;
   width: calc(100vw - 300px);
   height: 100vh;
+  @include clearfix();
     header{
       height: 99px;
       padding: 0 40px;
@@ -39,11 +40,14 @@
     .main-contents{
       background-color: #AAAAAA;
       height: calc(100vh - 192px);
+      width: calc(100% - 80px);
       padding: 0 40px;
       border-top: 1px solid #eeeeee;
       border-bottom: 1px solid #eeeeee;
+      overflow: scroll;
       .message-list{
         padding-top: 6px;
+        padding-bottom: 40px;
         .message-container{
           padding-top: 40px;
           &__header{

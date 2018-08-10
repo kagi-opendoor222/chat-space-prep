@@ -5,33 +5,19 @@
         タイトル
       %ul.group-detail__member-list
         member:
-        %li
-          no1,
-        %li
-          no2
+        -@group.users.each do |user|
+          %li
+            = user.name
     %a.edit-button{href: "#"}
       Edit
   .main-contents
     %ul.message-list
-      %li.message-container
-        %h3.message-container__header
-          user
-          %span.date
-            20XX/XX/XX
-        %p.message-container__text
-          aaa
-      %li.message-container
-        %h3.message-container__header
-          user
-          %span.date
-            20XX/XX/XX
-        %p.message-container__text
-          aaa
+      = render @messages
   .chat-box
-    %form.send-message-box
+    = form_for [@group, @message], html: {class: "send-message-box"} do |f|
       .send-message-box__textarea
-        %input.textbox{:type => "text", :placeholder => "type a message"}
-        %label.uploadericon{:for =>"imageuploader"}
+        = f.text_field :content, placeholder: "type a message", class: "textbox"
+        = f.label :image, class: "uploadericon", for: "imageuploader" do
           = fa_icon "image"
-        %input#imageuploader{:type => "file"}
-      %input.send-message-box__submitbutton{:type => "submit",:value => "Send"}
+        = f.file_field :image, id: "imageuploader"
+      = f.submit class: "send-message-box__submitbutton", value: "Send"

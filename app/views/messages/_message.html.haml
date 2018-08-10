@@ -1,0 +1,8 @@
+%li.message-container
+  %h3.message-container__header
+    = message.user.name
+    %span.date
+      = message.created_at.to_s(:default)
+  = image_tag(message.image.url, style: "margin-top: 10px")if message.image.url
+  %p.message-container__text
+    = message.content

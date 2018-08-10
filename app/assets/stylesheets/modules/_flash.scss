@@ -1,11 +1,12 @@
 .notification{
-  background-color: $sky-blue;
   .notice{
     color: $white;
+    background-color: $sky-blue;
     text-align: center;
   }
   .alert{
     color: $white;
+    background-color: $alert-orange;
     text-align: center;
   }
 }

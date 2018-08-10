@@ -5,8 +5,6 @@
         = current_user.name
     %ul.top__list
       %li
-        / %a{:href => "#"}
-        /   = fa_icon "edit"
         = link_to new_group_path do
           = fa_icon "edit"
       %li
@@ -19,4 +17,4 @@
           .chatgroup__name
             = group.name
           .chatgroup__message
-            メッセージはまだありません。
+            = group.display_latest_message
