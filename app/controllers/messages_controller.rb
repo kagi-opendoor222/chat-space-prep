@@ -5,11 +5,19 @@ class MessagesController < ApplicationController
     @messages = @group.messages
   end
   def create
-    message = @group.messages.new(message_params.merge(user_id: current_user.id))
-    if message.save
-      redirect_to action: :index
-    else
-      redirect_to action: :index, alert: "メッセージ送信に失敗しました。"
+    # message = @group.messages.new(message_params.merge(user_id: current_user.id))
+    # if message.save
+    #   redirect_to action: :index
+    # else
+    #   redirect_to action: :index, alert: "メッセージ送信に失敗しました。"
+    # end
+    @message = @group.messages.new(message_params.merge(user_id: current_user.id))
+    respond_to do |format|
+      if @message.save
+        format.html
+        format.json
+      else
+      end
     end
   end
   private

@@ -19,7 +19,7 @@
         &__member-list{
           margin-top: 15px;
           font-size: 12px;
-          color: $supplement-gray;
+          color: $color-chat-supplement;
           li{
             display: inline-block;
           }
@@ -27,7 +27,7 @@
       }
       .edit-button{
         float: right;
-        border: 2px solid $sky-blue;
+        border: 2px solid $color-chat-button;
         display: block;
         height: 40px;
         line-height: 40px;
@@ -53,24 +53,25 @@
           &__header{
             font-size: 16px;
             font-weight: bold;
-            color: $basic-text-gray;
+            color: $color-chat-basic-text;
             .date{
               padding-left: 10px;
               font-size: 12px;
               font-weight: bold;
-              color: $supplement-gray;
+              color: $color-chat-supplement;
             }
           }
           &__text{
             font-size: 14px;
             margin-top: 10px;
-            color: $basic-text-gray;
+            color: $color-chat-basic-text;
           }
         }
       }
     }
     .chat-box{
       padding: 20px 40px;
+
       background-color: #DDDDDD;
       .send-message-box{
         @include clearfix();
@@ -84,16 +85,18 @@
           .textbox{
             height: 50px;
             border-style: none;
+            box-sizing: border-box;
             width: 100%;
-          }
-          .textbox::placeholder{
             padding-left: 10px;
+            &::placeholder{
+            }
           }
+
           .uploadericon{
               position: absolute;
               right: 10px;
               bottom: 13px;
-              color: $basic-text-gray;
+              color: $color-chat-basic-text;
           }
           #imageuploader{
             display: none;
@@ -102,7 +105,7 @@
         &__submitbutton{
           float: right;
           border-style: none;
-          background-color: $sky-blue;
+          background-color: $color-chat-supplement;
           color: white;
           font-size: 16px;
           height: 50px;
