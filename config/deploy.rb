@@ -10,6 +10,9 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, ->{ "#{current_path}/config/unicorn.rb" }
 
+set :ssh_options, auth_methods: ['public_key'],
+                  keys: ['Users/Keisuke/.ssh/aws-test.pem']
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
