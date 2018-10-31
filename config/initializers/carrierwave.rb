@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'kagi-upload-test'
-  config.asset_host = 's3-ap-northeast-1.amazonaws.com/kagi-upload-test'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/kagi-upload-test'
 end
