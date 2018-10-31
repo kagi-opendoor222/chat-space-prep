@@ -75,11 +75,6 @@ namespace :deploy do
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
-      require 'logger'
-      logger = Logger.new('logfile.log')
-      # config.logger = Logger.new('log/deploy.log')
-      # logger.debug("うおおおおおおおおおおおおおおおおおおおお")
-      logger.debug(execute `echo "! -d #{shared_path}/config"`)
       if test "[ ! -d #{shared_path}/config ]"
         execute "mkdir -p #{shared_path}/config"
       end
